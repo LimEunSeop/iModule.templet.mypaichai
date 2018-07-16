@@ -1,0 +1,141 @@
+ /**
+  * 모바일 슬라이드 메뉴
+  */
+aside.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    z-index: 20000;
+    display: none;
+
+    > div.header {
+        background: #182e7a;
+        height: 40px;
+        padding: 10px 0px 10px 10px;
+        font-size: 0;
+        font-weight: bold;
+        color: #fff;
+
+        > button {
+            float: right;
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            box-sizing: border-box;
+            vertical-align: middle;
+            cursor: pointer;
+            background: transparent;
+            margin: -10px 0px;
+            padding: 0;
+            border: 0;
+
+            > i {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                font-size: 30px;
+                color: rgba(255,255,255,0.8);
+            }
+
+            &:hover > i {
+                color: #fff;
+            }
+        }
+    }
+
+    > ul.menu {
+        width: 100%;
+        height: calc(100% - 60px);
+        border-top: 1px solid #153869;
+        list-style: none;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
+
+        > li {
+            overflow: hidden;
+            height: 50px;
+
+            > a {
+                display: block;
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                font-size: 14px;
+                padding: 0px 20px;
+                text-decoration: none;
+                border: 0;
+                background: #fff;
+                color: #222;
+                box-sizing: border-box;
+                border-bottom: 1px solid #e0e0e0;
+                text-align: left;
+                cursor: pointer;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+
+                > i.icon {
+                    float: left;
+                    width: 30px;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 20px;
+                    color: #153869;
+                    opacity: 0.6;
+                }
+                > i[data-role=toggle] {
+                    float: right;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 20px;
+                    color: #222;
+                    margin-right: -20px;
+                    text-align: center;
+                }
+            }
+
+            > div.submenu {
+                background: #f7f7f7;
+                padding: 0px 0px;
+                border-bottom: 1px solid #e0e0e0;
+
+                > a {
+                    display: block;
+                    width: 100%;
+                    height: 40px;
+                    line-height: 40px;
+                    padding: 0px 20px 0px 35px;
+                    box-sizing: border-box;
+                    text-decoration: none;
+                    color: #333;
+                    font-size: 13px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+
+                    &.selected {
+                        background: #24b1dc; color: #fff;
+                    }
+                    &:hover {
+                        background: #24b1dc; color: #fff;
+                    }
+                }
+            }
+        }
+
+        > li.opened {
+            height: auto;
+
+            > a > i[data-role=toggle] {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

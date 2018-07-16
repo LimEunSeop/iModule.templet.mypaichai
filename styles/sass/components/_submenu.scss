@@ -1,0 +1,132 @@
+header {
+    > nav[data-role=navigation] > div.container {
+        > ul {
+            > li > div.submenu {
+                position:absolute;
+                top:105px;
+                left:0px;
+                right:0px;
+                width:100%;
+                background:#112155;
+                z-index:999;
+                display:none;
+                box-shadow:0px 10px 10px rgba(0,0,0,0.1);
+
+                > div.container {
+                    font-size: 0;
+                    padding: 20px 0px;
+
+                    // > .title {
+                    //     display: inline-block;
+                    //     width: 300px;
+                    //     height: 260px;
+                    //     background: #fff url(../images/bi_g.png) no-repeat 60px 165px;
+                    //     vertical-align: top;
+
+                    //     > h2 {
+                    //         font-size: 28px;
+                    //         height: 32px;
+                    //         line-height: 32px;
+                    //         color: #1c4b8c;
+                    //         padding: 40px 0px 20px 0px;
+                    //         border-bottom: 1px solid #1c4b8c;
+                    //         margin-bottom: 20px;
+                    //         display: inline-block;
+                    //         letter-spacing: -1px;
+
+                    //         > i.icon {
+                    //             display: block;
+                    //             float: left;
+                    //             width: 24px;
+                    //             height: 24px;
+                    //             margin: 4px 10px 4px 0px;
+                    //             background-repeat: no-repeat;
+                    //             background-size: contain;
+                    //             background-position: 0 50%;
+                    //             overflow: hidden;
+                    //             font-size: 20px;
+                    //             vertical-align: middle;
+                    //             line-height: 24px;
+                    //         }
+                    //     }
+
+                    //     > p {
+                    //         font-size:14px;
+                    //         line-height:24px;
+                    //         color:#666;
+                    //         padding-top:0px;
+                    //         padding-right:10px;
+                    //         font-weight:400;
+                    //     }
+                    // }
+
+                    > div.menus {
+                        display: inline-block;
+                        width: calc(100% - 40px);
+                        
+
+                        > ul {
+                            display: inline-block;
+                            width: 33.333333%;
+                            box-sizing: border-box;
+                            border-right: 1px solid rgba(255,255,255,0.1);
+                            vertical-align: top;
+                            padding: 0px 10px;
+                            
+                            &:last-child {
+                                border: 0;
+                            }
+
+                            > li {
+                                display: block;
+                                color: #333;
+                                padding: 2px 0px;
+
+                                > a {
+                                    display: block;
+                                    height: 34px;
+                                    line-height: 34px;
+                                    overflow: hidden;
+                                    cursor: pointer;
+                                    padding-left: 10px;
+                                    color: #fff !important;
+                                    font-size: 15px;
+                                    text-decoration: none;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    text-align: left;
+
+                                    &:hover {
+                                        background: #fff;
+                                        color: #112155 !important;
+                                    }
+
+                                    i.icon {
+                                        display: block;
+                                        float: left;
+                                        width: 20px;
+                                        height: 20px;
+                                        margin: 13px 5px 13px 0px;
+                                        background-repeat: no-repeat;
+                                        background-size: contain;
+                                        background-position: 0 50%;
+                                        overflow: hidden;
+                                        font-size: 14px;
+                                        vertical-align: middle;
+                                        line-height: 20px;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > li:hover > div.submenu {
+                display:block;
+            }
+        }
+    }
+}
+

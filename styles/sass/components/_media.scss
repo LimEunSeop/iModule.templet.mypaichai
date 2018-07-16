@@ -1,0 +1,167 @@
+ /**
+  * 모바일
+  */
+
+@media (max-width: 767px) {
+    header {
+        box-shadow: 0px 1px 3px rbga(0,0,0,0.3);
+
+        > div.top {
+            display: none;
+        }
+
+        // 상단메뉴
+        > nav[data-role=navigation] {
+            height: 60px;
+
+            > div.container {
+                
+                // 사이트 로고 영역
+                > h1 {
+                    max-width: calc(100% - 60px);
+                    height: 40px;
+                    margin: 10px 0px;
+
+                    > a {
+                        background-position-x: -5px;
+                    }
+                }
+
+                > button[data-action=slide] {
+                    display: block;
+                    margin-right: -10px;
+                    color: #fff;
+                }
+
+                > ul {
+                    display: none;
+                }
+
+                > button[data-action=dropdown] {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // 사이트푸터
+    footer {
+        > div.container {
+            > div.contact {
+                > i.emblem {
+                    float: none;
+                    margin: 0 auto;
+                    width: 60px;
+                    height: 60px;
+                }
+
+                > div.address {
+                    width: 100%;
+                    height: auto;
+                    padding-top: 10px;
+
+                    > div {
+                        text-align: center;
+                        white-space: normal;
+                        line-height: 20px;
+                        height: auto;
+                    }
+                }
+            }
+
+            > div.copyright {
+                margin-top: 20px;
+
+                > div {
+                    text-align: center;
+                    width: 100%;
+
+                    &.status {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+ * 태블릿
+ */
+@media (min-width:768px) and (max-width:991px) {
+
+    header {
+        box-shadow: 0px 1px 3px rbga(0,0,0,0.3);
+
+        > div.top {
+            display: none;
+        }
+
+        // 상단메뉴
+        > nav[data-role=navigation] {
+            height: 60px;
+            overflow: hidden;
+            
+            > div.container {
+                
+                // 사이트 로고 영역
+                > h1 {
+                    height: 50px;
+                    margin: 5px 0px;
+
+                    > a {
+                        background-position-x: -5px;
+                    }
+                }
+
+                > button[data-action=slide] {
+                    display: block;
+                    margin-right: -10px;
+                    color: #fff;
+                }
+
+                > ul {
+                    display: none;
+                }
+
+                > button[data-action=dropdown] {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/**
+ * 해상도가 작은 데스크탑
+ */
+@media (min-width:992px) and (max-width:1199px) {
+    /**
+     * 마우스 오버시 나타나는 서브메뉴
+     */
+    header > nav[data-role=navigation] > div.container > ul > li > div.submenu > div.container {
+        > .title {
+            width:240px;
+
+            > h2 {
+                font-size:20px; height:28px; line-height:28px; margin-bottom:16px; padding-top:30px; padding-bottom:10px;
+
+                > i.icon {
+                    width:20px; height:20px; line-height:20px; font-size:16px;
+                }
+            }
+
+            > p {
+                font-size: 12px;
+            }
+        }
+
+        > div.menus {
+            width: calc(100% - 240px);
+
+            > ul > li > a {
+                padding: 0px 15px;
+            }
+        }
+    }
+}
